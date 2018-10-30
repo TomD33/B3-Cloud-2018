@@ -75,6 +75,14 @@ Le rendu s'effectuera à travers un dépôt GitHub (ou autres, mais un dépôt `
 
 * Créez ensuite **5 machines** à l'aide de ce `Vagrantfile` (ça se fait facilement à l'aide d'une variable déjà créée dans le fichier `Vagrantfile`).
 
+# IMPORTANT. DE FOU.
+Je vous demande de travailler avec 2 machines reliées via le réseau afin d'alléger la charge supportée par chacune de vos hôtes.  
+Sauf qu'on monte des technos de cluster dans tous les sens. Donc si vous débranchez le câble, tout va probablement exploser. Ce qu'on va faire c'est répartir intelligemment les services sur vos deux machines.  
+
+Appelez-moi si vous êtes pas certains.  
+
+(pour ceux qui lisent ça, il y aura + de détails d'ici le TP prochain)
+
 # Docker Swarm
 
 [Docker est déjà installé par défaut sur CoreOS](https://coreos.com/os/docs/latest/getting-started-with-docker.html). Inspectez sa configuration (unité de service `systemd` et `docker info`).  
