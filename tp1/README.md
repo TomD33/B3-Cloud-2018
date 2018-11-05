@@ -98,12 +98,12 @@ Configurez :
 * **un swarm avec 3 managers et 2 workers.**
 ```
 # Sur votre premier manager :
-docker swarm init --advertise-addr <IP_HOST_ONLY>
+docker swarm init --advertise-addr <IP_CURRENT_VM>
 
-# Génère une commande à taper sur les autres managers
+# Depuis la VM actuelle (manager), générer une commande à taper sur les autres managers
 docker swarm join-token manager
 
-# Génère une commande à taper sur les workers
+# Depuis la VM actuelle (manager), générer une commande à taper sur les workers
 docker swarm join-token worker
 ```
 
