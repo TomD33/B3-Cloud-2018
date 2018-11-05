@@ -129,7 +129,7 @@ Tout au long du TP, nous déploierons ce service, mais en changeant notre proces
 
 Tous nos services, nos applicatifs, tourneront sous la forme de stacks ou services Swarm. On crée un `docker-compose.yml` pour chacune des stacks. On trouvera aussi un répertoire de donnée pour chacune d'entre elles.
 
-* utilisez le `compose.yml` fourni afin d'avoir une stack de test (provient de la correction du TP2 Conteneurisation). Il pop l'archi suivante : `BDD <--- AppPython <--- NGINX`
+* utilisez le [`compose.yml`](./app) fourni afin d'avoir une stack de test (provient de la correction du TP2 Conteneurisation). Il pop l'archi suivante : `BDD <--- AppPython <--- NGINX`
 * les images utilisées dans le `docker-compose.yml` doivent être accessibles sur tous les noeuds.
 
 ```
