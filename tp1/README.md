@@ -93,7 +93,7 @@ Pour rappel, [Docker Swarm](https://docs.docker.com/engine/swarm/#feature-highli
 
 Configurez :
 * le `experimental` mode de Docker pour pouvoir récupérer des métriques (voir [dockerd config](https://docs.docker.com/engine/reference/commandline/dockerd/))
-  * ajoutez aussi la clause `metrics_addr` et sa valeur `0.0.0.0:9323`
+  * ajoutez aussi la clause `metrics-addr` et sa valeur `0.0.0.0:9323`
 
 * **un swarm avec 3 managers et 2 workers.**
 ```
