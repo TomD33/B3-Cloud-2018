@@ -72,12 +72,16 @@ Le rendu s'effectuera à travers un dépôt GitHub (ou autres, mais un dépôt `
   * ajouter un dique de 10Go
   * utiliser une interface bridgé sur votre connexion Ethernet
     * vos hôtes et vos VMs vivront dans le même réseau (grâce au câble)
-* pour gagner du temps par la suite, vous pouvez aussi customisez la box utilisée afin d'y intégrer les images `docker` suivantes :
-  * [`ceph/daemon`](https://hub.docker.com/r/ceph/daemon/)
-  * [`osixia/keepalived:1.3.5`](https://github.com/osixia/docker-keepalived)
-  * [`traefik:latest`](https://hub.docker.com/_/traefik/)
 
 * Créez ensuite **5 machines** à l'aide de ce `Vagrantfile` (ça se fait facilement à l'aide d'une variable déjà créée dans le fichier `Vagrantfile`).
+
+# IMPORTANT. DE FOU.
+Je vous demande de travailler avec 2 machines reliées via le réseau afin d'alléger la charge supportée par chacune de vos hôtes.  
+Sauf qu'on monte des technos de cluster dans tous les sens. Donc si vous débranchez le câble, tout va probablement exploser. Ce qu'on va faire c'est répartir intelligemment les services sur vos deux machines.  
+
+Appelez-moi si vous êtes pas certains.  
+
+(pour ceux qui lisent ça, il y aura + de détails d'ici le TP prochain)
 
 # Docker Swarm
 
