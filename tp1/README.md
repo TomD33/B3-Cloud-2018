@@ -323,7 +323,7 @@ cat keyring.dockerswarm
 * Puis sur tous les noeuds :
 ```
 mkdir /data
-echo "<MONITOR_IPS_COMMA_SEPARATED>:6789:/      /data/      ceph      name=dockerswarm,secret=<YOUR_SECRET_HERE>,noatime,_netdev 0 2" > /etc/fstab
+echo "<MONITOR_IPS_COMMA_SEPARATED>:6789:/      /data/      ceph      name=dockerswarm,secret=<YOUR_SECRET_HERE>,noatime,_netdev 0 2" >> /etc/fstab
 mount -a`
 ```
 
