@@ -394,7 +394,7 @@ On va mettre en place une **IP Virtuelle**, que porteront tous nos serveurs, à 
 
 En admettant la config suivante : 
 * IP Virtuelle voulue sur `172.17.8.100`
-* IPs des 5 hôtes : `172.17.8.101`, `172.17.8.102`, `172.17.8.103`, `172.17.8.104`, `172.17.8.105`
+* IPs des 5 hôtes : `172.17.8.101`, `172.17.8.102`, `172.17.8.103`, `172.17.8.104`, `172.17.8.105`, portée par l'interface `eth1`
 * on obtient la commande suivante pour lancer Keepalived sur un noeud :
 
 ```
@@ -403,10 +403,11 @@ docker run -d --name keepalived --restart=always \
   -e KEEPALIVED_VIRTUAL_IPS=172.17.8.100 \
   -e KEEPALIVED_UNICAST_PEERS="#PYTHON2BASH:['172.17.8.101', '172.17.8.102', '172.17.8.103', '172.17.8.104', '172.17.8.105']" \
   -e KEEPALIVED_PRIORITY=200 \
-  osixia/keepalived:1.3.5
+  -e KEEPALIVED_INTERFACE=eth1  \
+  osixia/keepalived:2.0.10
 ```
 
-* Lancez la commande sur tous vos hôtes, en modifiant la priorité à chaque fois
+* Lancez la commande sur tous vos hôtes, **en modifiant la priorité à chaque fois**
   * **une fois fait, vous n'accéderez à votre cluster plus qu'avec l'ip virtuelle**
 
 * Expliquez :
