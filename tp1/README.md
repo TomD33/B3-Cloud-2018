@@ -28,6 +28,28 @@ Le but de ce TP est de déployer une stack applicative complexe reflétant les e
 
 Le rendu s'effectuera à travers un dépôt GitHub (ou autres, mais un dépôt `git` que je peux atteindre). Le format `md` est donc tout indiqué pour votre compte-rendu, mais vous restez libres :)
 
+* [Notions/Technos](#notionstechnos)
+* [Prerequisites](#prerequisites) : setup VMs
+* [Important](#important-de-fou)
+* [Setup Swarm](#docker-swarm)
+  * [Mise en place](#mise-en-place)
+  * [Commandes de base](#commandes-de-base)
+* [Dumb Service Pt.1](#dumb-service---part-1)
+* [Weave Cloud](#weave-cloud)
+* Stockage (pick one)
+  * [CEPH](#a-ceph-ooooouuuuu) ou...
+  * ... simple [NFS](#b-nfs)
+* Docker [Registry Pt.1](#registry---part-1)
+* [Dumb Service Pt.2](#dumb-service---part-2)
+* [Keepalived](#keepalived)
+* [Metrics](#show-me-your-metrics)
+* Reverse proxy [Traefik](#traefik)
+* [Dumb Service Pt.3](#dumb-service---part-3)
+* Docker [Registry Pt.2](#registry---part-2)
+* Docker [Registry Pt.3](#registry---part-3)
+* [Backup](#backup)
+* [Récap](#récap)
+
 # Notions/Technos
 * Système
   * CoreOS CoreOS (OS)
