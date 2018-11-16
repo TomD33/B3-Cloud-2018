@@ -93,17 +93,17 @@ Pour rappel, [Docker Swarm](https://docs.docker.com/engine/swarm/#feature-highli
 
 Configurez :
 * le `experimental` mode de Docker pour pouvoir récupérer des métriques (voir [dockerd config](https://docs.docker.com/engine/reference/commandline/dockerd/))
-  * ajoutez aussi la clause `metrics_addr` et sa valeur `0.0.0.0:9323`
+  * ajoutez aussi la clause `metrics-addr` et sa valeur `0.0.0.0:9323`
 
 * **un swarm avec 3 managers et 2 workers.**
 ```
 # Sur votre premier manager :
-docker swarm init --advertise-addr <IP_HOST_ONLY>
+docker swarm init --advertise-addr <IP_CURRENT_VM>
 
-# Génère une commande à taper sur les autres managers
+# Depuis la VM actuelle (manager), générer une commande à taper sur les autres managers
 docker swarm join-token manager
 
-# Génère une commande à taper sur les workers
+# Depuis la VM actuelle (manager), générer une commande à taper sur les workers
 docker swarm join-token worker
 ```
 
@@ -323,7 +323,7 @@ cat keyring.dockerswarm
 * Puis sur tous les noeuds :
 ```
 mkdir /data
-echo "<MONITOR_IPS_COMMA_SEPARATED>:6789:/      /data/      ceph      name=dockerswarm,secret=<YOUR_SECRET_HERE>,noatime,_netdev 0 2" > /etc/fstab
+echo "<MONITOR_IPS_COMMA_SEPARATED>:6789:/      /data/      ceph      name=dockerswarm,secret=<YOUR_SECRET_HERE>,noatime,_netdev 0 2" >> /etc/fstab
 mount -a`
 ```
 
@@ -394,7 +394,7 @@ On va mettre en place une **IP Virtuelle**, que porteront tous nos serveurs, à 
 
 En admettant la config suivante : 
 * IP Virtuelle voulue sur `172.17.8.100`
-* IPs des 5 hôtes : `172.17.8.101`, `172.17.8.102`, `172.17.8.103`, `172.17.8.104`, `172.17.8.105`
+* IPs des 5 hôtes : `172.17.8.101`, `172.17.8.102`, `172.17.8.103`, `172.17.8.104`, `172.17.8.105`, portée par l'interface `eth1`
 * on obtient la commande suivante pour lancer Keepalived sur un noeud :
 
 ```
@@ -403,10 +403,11 @@ docker run -d --name keepalived --restart=always \
   -e KEEPALIVED_VIRTUAL_IPS=172.17.8.100 \
   -e KEEPALIVED_UNICAST_PEERS="#PYTHON2BASH:['172.17.8.101', '172.17.8.102', '172.17.8.103', '172.17.8.104', '172.17.8.105']" \
   -e KEEPALIVED_PRIORITY=200 \
-  osixia/keepalived:1.3.5
+  -e KEEPALIVED_INTERFACE=eth1  \
+  osixia/keepalived:2.0.10
 ```
 
-* Lancez la commande sur tous vos hôtes, en modifiant la priorité à chaque fois
+* Lancez la commande sur tous vos hôtes, **en modifiant la priorité à chaque fois**
   * **une fois fait, vous n'accéderez à votre cluster plus qu'avec l'ip virtuelle**
 
 * Expliquez :
