@@ -9,7 +9,7 @@ Membres :
 * Yann
 * Yoann
 * Jonathan
-* Alexandre
+* Alexandre  
 Sujet : 
 * Rancher
 
@@ -17,7 +17,7 @@ Sujet :
 Membres : 
 * Benjamin
 * Julien
-* Antoine
+* Antoine  
 Sujet : 
 * p/f POC k8s maîtrisée et légère
 
@@ -25,14 +25,14 @@ Sujet :
 Membres :
 * Raphael
 * Leo
-* Kelian
+* Kelian  
 Sujet : 
 * hébergement maîtrisé : cloud pub ou on-premises ?
 
 # Groupe 5
 Membres :
 * Charly
-* Arsène
+* Arsène  
 Sujet : 
 * not yet defined
 * infra cloud sécurisée ?
@@ -44,7 +44,7 @@ Sujet :
 # Groupe 6
 Membres : 
 * Julien
-* Cédric
+* Cédric  
 Sujet :
 * DB dans le cloud ?
 
@@ -52,7 +52,7 @@ Sujet :
 Membres :
 * Clément
 * Paulin
-* Matthieu
+* Matthieu  
 Sujet :
 * Partage de fichiers hautement disponible
   * accessible sur un serv publique
@@ -76,7 +76,7 @@ Sujet :
 Membres :
 * John
 * Yannick
-* Gaby
+* Gaby  
 Sujet : 
 * p/f d'hébergement et de ditribution de fichiersA
   * choix technique
@@ -89,13 +89,13 @@ Membres :
 * Adriano
 * Charles
 Sujet : 
-* Accès sécurisé services client through RDP
+* Accès sécurisé services client through RDP  
 
 # Groupe 10
 Membres :
 * Nakib
 * Amaury
-* Terry
+* Terry  
 Sujet : 
 * Industrialisation déploiement d'infra
 * Packaging d'applications + automation
