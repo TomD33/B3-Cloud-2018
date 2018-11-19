@@ -54,7 +54,23 @@ Membres :
 * Paulin
 * Matthieu
 Sujet :
-* Partage de fichiers
+* Partage de fichiers hautement disponible
+  * accessible sur un serv publique
+  * contôle d'intégrité sur fichiers
+  * accès authentifié
+  * règles d'upload (extension de fichiers, taille, etc.)
+
+* hébergement (infra)
+  * SFTP = FTP over SSH 
+    * configuration SSH à réfléchir 
+  * gestion d'accès/permissions/users
+  * Backend de stockage ? 
+  * Sauvegarde ?
+
+* clients (front)
+  * GUI Web
+  * accès authentifié aux ressources 
+  * dl/upload de fichiers
 
 # Groupe 8
 Membres :
@@ -62,8 +78,11 @@ Membres :
 * Yannick
 * Gaby
 Sujet : 
-* file sharing ?...
+* p/f d'hébergement et de ditribution de fichiersA
+  * choix technique
+  * dans un premier temps, simple (pas de contrôle d'accès, pas de flux chiffré, pas de gestion permissions)
 
+* permet l'interrogation/utilisation, sans passer par un CLI 
 
 # Groupe 9
 Membres : 
