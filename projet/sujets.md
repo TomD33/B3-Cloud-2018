@@ -34,7 +34,6 @@
   * Charly
   * Arsène  
 * Sujet : 
-  * not yet defined
   * infra cloud sécurisée ?
     * distribution d'images
     * stockage
