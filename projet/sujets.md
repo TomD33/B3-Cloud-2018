@@ -76,6 +76,7 @@
   * John
   * Yannick
   * Gaby  
+  * Thomas
 * Sujet : 
   * p/f d'hébergement et de ditribution de fichiersA
     * choix technique
